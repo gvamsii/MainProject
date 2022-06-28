@@ -35,18 +35,18 @@ public class ForgotPasswordControllerTest {
 		
 	}
 	
-	@Test
-	void verifyOTPTest() {
-		User user=new User();
-		user.setMobile(1614704577);
-		user.setPassword("hai");;
-		Long mobile=user.getMobile();
-		String password=user.getPassword();
-		String otp="3625";
-		Mockito.when(forgotPasswordService.updatePassword(Mockito.anyString(),Mockito.anyLong(),Mockito.anyString())).thenReturn("verified OTP");
-		String response=forgotPasswordController.verifyOTP(otp, mobile, password);
-		assertEquals("verified OTP",response);
-	}
+//	@Test
+//	void verifyOTPTest() {
+//		User user=new User();
+//		user.setMobile(1614704577);
+//		user.setPassword("hai");;
+//		Long mobile=user.getMobile();
+//		String password=user.getPassword();
+//		String otp="3625";
+//		Mockito.when(forgotPasswordService.updatePassword(Mockito.anyString(),Mockito.anyLong(),Mockito.anyString())).thenReturn("verified OTP");
+//		String response=forgotPasswordController.verifyOTP(otp, mobile, password);
+//		assertEquals("verified OTP",response);
+//	}
 }
 
 
